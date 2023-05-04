@@ -9,14 +9,14 @@ Olimpia Milano - Cantù | 55-60 -->
         [
             "Casa" => "Olimpia Milano",
             "Ospite" => " Cantù",
-            "Punteggio Casa" => "55",
-            "Punteggio Ospite" => "60"
+            "PunteggioCasa" => "55",
+            "PunteggioOspite" => "60"
         ],
         [
             "Casa" => "Virtus Padova",
             "Ospite" => "Torino",
-            "Punteggio Casa" => "88",
-            "Punteggio Ospite" => "42"
+            "PunteggioCasa" => "88",
+            "PunteggioOspite" => "42"
         ],
     ]
 
@@ -31,6 +31,15 @@ Olimpia Milano - Cantù | 55-60 -->
     <title>php-snack1</title>
 </head>
 <body>
+    <h1>DAY 7 MATCHES RESULTS</h1>
+
+    <?php foreach($matches as $match) : ?>
+        <p>
+            <?= 
+                $match["Casa"] . " - " . $match["Ospite"] . " | " . $match["PunteggioCasa"] . " - " . $match["PunteggioOspite"]
+            ?>
+        </p>
+    <?php endforeach; ?>    
     
 </body>
 </html>
